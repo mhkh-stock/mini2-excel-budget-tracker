@@ -7,6 +7,7 @@ sees the summaries move — that is the skill being demonstrated.
 
 SAMPLE data only: fictional household, fictional amounts, Jan 2026.
 """
+from datetime import date
 from pathlib import Path
 
 from openpyxl import Workbook
@@ -23,38 +24,38 @@ MONEY = '#,##0'
 
 # (date, description, category, type, amount PKR)
 TRANSACTIONS = [
-    ("2026-01-01", "Monthly salary", "Income", "Income", 120000),
-    ("2026-01-01", "Freelance design work", "Income", "Income", 25000),
-    ("2026-01-02", "House rent", "Rent", "Expense", 35000),
-    ("2026-01-03", "Grocery — Imtiaz", "Groceries", "Expense", 18500),
-    ("2026-01-04", "Petrol", "Transport", "Expense", 8000),
-    ("2026-01-05", "Electricity bill", "Utilities", "Expense", 9500),
-    ("2026-01-06", "Grocery — weekly top-up", "Groceries", "Expense", 7200),
-    ("2026-01-07", "Dinner with family", "Food Out", "Expense", 4500),
-    ("2026-01-08", "Internet bill", "Utilities", "Expense", 3500),
-    ("2026-01-09", "Bus / ride fares", "Transport", "Expense", 3200),
-    ("2026-01-10", "Grocery — weekly top-up", "Groceries", "Expense", 6800),
-    ("2026-01-11", "Cinema tickets", "Entertainment", "Expense", 2800),
-    ("2026-01-12", "Mobile load / package", "Utilities", "Expense", 1500),
-    ("2026-01-13", "Office lunch", "Food Out", "Expense", 1800),
-    ("2026-01-14", "Grocery — weekly top-up", "Groceries", "Expense", 7400),
-    ("2026-01-15", "Transferred to savings", "Savings", "Expense", 20000),
-    ("2026-01-16", "Petrol", "Transport", "Expense", 7500),
-    ("2026-01-17", "Birthday gift", "Entertainment", "Expense", 5000),
-    ("2026-01-18", "Grocery — weekly top-up", "Groceries", "Expense", 6900),
-    ("2026-01-19", "Gas bill", "Utilities", "Expense", 4200),
-    ("2026-01-20", "Takeaway dinner", "Food Out", "Expense", 3200),
-    ("2026-01-21", "Grocery — weekly top-up", "Groceries", "Expense", 7100),
-    ("2026-01-22", "Ride fares", "Transport", "Expense", 2900),
-    ("2026-01-23", "Streaming subscription", "Entertainment", "Expense", 1200),
-    ("2026-01-24", "Grocery — month-end top-up", "Groceries", "Expense", 5400),
-    ("2026-01-25", "Water bill", "Utilities", "Expense", 1800),
-    ("2026-01-26", "Office lunch", "Food Out", "Expense", 1600),
-    ("2026-01-27", "Petrol", "Transport", "Expense", 7000),
-    ("2026-01-28", "Grocery — month-end top-up", "Groceries", "Expense", 5100),
-    ("2026-01-29", "Snacks / chai", "Food Out", "Expense", 1400),
-    ("2026-01-30", "Phone accessories", "Entertainment", "Expense", 3500),
-    ("2026-01-31", "Extra savings top-up", "Savings", "Expense", 5000),
+    (date(2026, 1, 1), "Monthly salary", "Income", "Income", 120000),
+    (date(2026, 1, 1), "Freelance design work", "Income", "Income", 25000),
+    (date(2026, 1, 2), "House rent", "Rent", "Expense", 35000),
+    (date(2026, 1, 3), "Grocery — Imtiaz", "Groceries", "Expense", 18500),
+    (date(2026, 1, 4), "Petrol", "Transport", "Expense", 8000),
+    (date(2026, 1, 5), "Electricity bill", "Utilities", "Expense", 9500),
+    (date(2026, 1, 6), "Grocery — weekly top-up", "Groceries", "Expense", 7200),
+    (date(2026, 1, 7), "Dinner with family", "Food Out", "Expense", 4500),
+    (date(2026, 1, 8), "Internet bill", "Utilities", "Expense", 3500),
+    (date(2026, 1, 9), "Bus / ride fares", "Transport", "Expense", 3200),
+    (date(2026, 1, 10), "Grocery — weekly top-up", "Groceries", "Expense", 6800),
+    (date(2026, 1, 11), "Cinema tickets", "Entertainment", "Expense", 2800),
+    (date(2026, 1, 12), "Mobile load / package", "Utilities", "Expense", 1500),
+    (date(2026, 1, 13), "Office lunch", "Food Out", "Expense", 1800),
+    (date(2026, 1, 14), "Grocery — weekly top-up", "Groceries", "Expense", 7400),
+    (date(2026, 1, 15), "Transferred to savings", "Savings", "Expense", 20000),
+    (date(2026, 1, 16), "Petrol", "Transport", "Expense", 7500),
+    (date(2026, 1, 17), "Birthday gift", "Entertainment", "Expense", 5000),
+    (date(2026, 1, 18), "Grocery — weekly top-up", "Groceries", "Expense", 6900),
+    (date(2026, 1, 19), "Gas bill", "Utilities", "Expense", 4200),
+    (date(2026, 1, 20), "Takeaway dinner", "Food Out", "Expense", 3200),
+    (date(2026, 1, 21), "Grocery — weekly top-up", "Groceries", "Expense", 7100),
+    (date(2026, 1, 22), "Ride fares", "Transport", "Expense", 2900),
+    (date(2026, 1, 23), "Streaming subscription", "Entertainment", "Expense", 1200),
+    (date(2026, 1, 24), "Grocery — month-end top-up", "Groceries", "Expense", 5400),
+    (date(2026, 1, 25), "Water bill", "Utilities", "Expense", 1800),
+    (date(2026, 1, 26), "Office lunch", "Food Out", "Expense", 1600),
+    (date(2026, 1, 27), "Petrol", "Transport", "Expense", 7000),
+    (date(2026, 1, 28), "Grocery — month-end top-up", "Groceries", "Expense", 5100),
+    (date(2026, 1, 29), "Snacks / chai", "Food Out", "Expense", 1400),
+    (date(2026, 1, 30), "Phone accessories", "Entertainment", "Expense", 3500),
+    (date(2026, 1, 31), "Extra savings top-up", "Savings", "Expense", 5000),
 ]
 
 # (category, monthly budget PKR) — expense categories only
@@ -85,7 +86,8 @@ def build():
     ws.title = "Transactions"
     header_row(ws, 1, ["Date", "Description", "Category", "Type", "Amount (PKR)"])
     for r, (d, desc, cat, typ, amt) in enumerate(TRANSACTIONS, start=2):
-        ws.cell(row=r, column=1, value=d)
+        dc = ws.cell(row=r, column=1, value=d)
+        dc.number_format = "yyyy-mm-dd"
         ws.cell(row=r, column=2, value=desc)
         ws.cell(row=r, column=3, value=cat)
         ws.cell(row=r, column=4, value=typ)

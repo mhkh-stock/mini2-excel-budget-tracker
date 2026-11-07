@@ -1,0 +1,3 @@
+# Mini #2 — Excel Budget & Expense Tracker
+# Verified with openpyxl 3.1.2 (installed here); 3.1.5 is the latest in range.
+openpyxl>=3.1.2,<3.2
