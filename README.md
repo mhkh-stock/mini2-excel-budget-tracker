@@ -1,5 +1,7 @@
 # Mini #2 — Excel Budget & Expense Tracker
 
+**Repo:** https://github.com/mhkh-stock/mini2-excel-budget-tracker
+
 **SAMPLE data only.** Fictional household, fictional amounts, Jan 2026.
 Never claimed as real client or real business data.
 
